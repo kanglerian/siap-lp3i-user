@@ -1,0 +1,51 @@
+GET http://localhost:5000/users
+
+###
+
+GET http://localhost:5000/refreshtoken?refresh_token=cd447ce394fb2190f61ab5ccc43785b2679ef3f5
+
+###
+
+GET http://localhost:5000/users/2
+
+###
+
+DELETE http://localhost:5000/users/logout
+Content-Type: application/json
+
+{
+    "user_id": 1
+}
+###
+
+POST http://localhost:5000/users/register
+Content-Type: application/json
+
+{
+    "fullName": "Sopyan",
+    "email": "sopyan@gmail.com",
+    "password": "sopyan123"
+}
+
+###
+
+POST http://localhost:5000/users/login
+Content-Type: application/json
+
+{
+    "email": "sopyan@gmail.com",
+    "password": "sopyan123"
+}
+
+###
+
+PATCH http://localhost:5000/users/update/2
+Content-Type: application/json
+
+{   
+    "fullName": "Sopyan",
+    "role": true,
+    "email": "kangsopyan@gmail.com",
+    "password": "sopyan123",
+    "status": true
+}
